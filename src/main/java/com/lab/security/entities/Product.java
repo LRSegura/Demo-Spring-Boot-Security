@@ -1,5 +1,6 @@
-package com.lab.security;
+package com.lab.security.entities;
 
+import com.lab.security.entities.Currency;
 import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.Setter;

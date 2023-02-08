@@ -1,4 +1,4 @@
-package com.lab.security;
+package com.lab.security.entities;
 
 import jakarta.persistence.*;
 import lombok.Getter;

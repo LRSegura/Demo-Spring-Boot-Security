@@ -1,6 +1,8 @@
-package com.lab.security;
+package com.lab.security.config;
 
-import org.springframework.beans.factory.annotation.Autowired;
+import com.lab.security.config.CustomUserDetails;
+import com.lab.security.data.UserRepository;
+import com.lab.security.entities.User;
 import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.stereotype.Service;

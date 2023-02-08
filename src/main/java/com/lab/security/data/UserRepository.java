@@ -1,5 +1,6 @@
-package com.lab.security;
+package com.lab.security.data;
 
+import com.lab.security.entities.User;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 import java.util.Optional;

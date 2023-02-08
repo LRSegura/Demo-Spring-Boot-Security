@@ -1,5 +1,6 @@
-package com.lab.security;
+package com.lab.security.data;
 
+import com.lab.security.entities.Product;
 import org.springframework.stereotype.Service;
 
 import java.util.List;

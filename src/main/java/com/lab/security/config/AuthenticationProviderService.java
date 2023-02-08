@@ -1,4 +1,4 @@
-package com.lab.security;
+package com.lab.security.config;
 
 import org.springframework.security.authentication.AuthenticationProvider;
 import org.springframework.security.authentication.BadCredentialsException;

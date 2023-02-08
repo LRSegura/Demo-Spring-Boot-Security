@@ -1,5 +1,6 @@
-package com.lab.security;
+package com.lab.security.web;
 
+import com.lab.security.data.ProductService;
 import org.springframework.security.core.Authentication;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;

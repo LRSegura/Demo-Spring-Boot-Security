@@ -1,5 +1,6 @@
-package com.lab.security;
+package com.lab.security.config;
 
+import com.lab.security.entities.User;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
