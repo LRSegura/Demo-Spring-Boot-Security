@@ -1,4 +1,4 @@
-package com.lab.security.config;
+package com.lab.security.config.filters;
 
 import jakarta.servlet.*;
 import jakarta.servlet.http.HttpServletRequest;
