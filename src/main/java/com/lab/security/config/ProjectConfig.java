@@ -30,9 +30,10 @@ public class ProjectConfig {
         http.formLogin()
                 .defaultSuccessUrl("/main", true);
         http.csrf().disable().authorizeHttpRequests((authorize) ->
-                authorize.requestMatchers(HttpMethod.POST, "/api/auth/signing").permitAll()
+                authorize  // .requestMatchers(HttpMethod.POST, "/api/auth/signing").permitAll()
                         //.requestMatchers("/api/auth/**").permitAll()
-                        .anyRequest().authenticated()
+                        //.anyRequest().authenticated()
+                        .anyRequest().hasAnyAuthority("WRITE","READ")
         ).httpBasic(withDefaults());
         return http.build();
     }
