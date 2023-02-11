@@ -7,6 +7,7 @@ import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.crypto.password.NoOpPasswordEncoder;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.security.web.SecurityFilterChain;
+import org.springframework.security.web.authentication.www.BasicAuthenticationFilter;
 
 import static org.springframework.security.config.Customizer.withDefaults;
 
@@ -29,7 +30,9 @@ public class ProjectConfig {
 
         http.formLogin()
                 .defaultSuccessUrl("/main", true);
-        http.csrf().disable().authorizeHttpRequests((authorize) ->
+        http.csrf().disable().addFilterBefore(new RequestValidationFilter(), BasicAuthenticationFilter.class)
+                .addFilterAfter(new AuthenticationLoggingFilter(), BasicAuthenticationFilter.class)
+                .authorizeHttpRequests((authorize) ->
                 authorize  // .requestMatchers(HttpMethod.POST, "/api/auth/signing").permitAll()
                         //.requestMatchers("/api/auth/**").permitAll()
                         //.anyRequest().authenticated()
